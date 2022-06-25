@@ -1,0 +1,80 @@
+﻿@model DoAnLapTrinhWeb.Models.SANPHAM
+
+@{
+    ViewBag.Title = "XoaSanPham";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div>
+    <h4 class="text-center">Bạn muốn xóa sản phẩm này?</h4>
+    <hr />
+    <img src="@Url.Content("~/HinhSanPham/"+  Model.Anh)" width="400px" class="center-block" />
+    <div class="row" style="margin:50px;">
+        <div class="col-md-2 text-md-right">
+            Tên sản phẩm:
+        </div>
+        <div class="col-md-4">
+            @Html.DisplayFor(model => model.TenSP)
+        </div>
+        <div class="col-md-2 text-md-right">
+            Tên loại:
+        </div>
+        <div class="col-md-4">
+            @Html.DisplayFor(model => model.LOAISANPHAM.TenLoai)
+        </div>
+    </div>
+    <div class="row" style="margin:50px;">
+        <div class="col-md-2 text-md-right">
+            Nhãn hàng:
+        </div>
+        <div class="col-md-4">
+            @Html.DisplayFor(model => model.BRAND.Brand1)
+        </div>
+        <div class="col-md-2 text-md-right">
+            Giá bán:
+        </div>
+        <div class="col-md-4">
+            @Html.DisplayFor(model => model.GiaBan) VND
+        </div>
+    </div>
+    <div class="row" style="margin:50px;">
+        <div class="col-md-2 text-md-right">
+            Ngày cập nhật:
+        </div>
+        <div class="col-md-4">
+            @String.Format("{0:dd/MM/yyy}", Model.NgayCapNhat)
+        </div>
+        <div class="col-md-2 text-md-right">
+            Số lượng tồn:
+        </div>
+        <div class="col-md-4">
+            @Html.DisplayFor(model => model.SoLuongTon)
+        </div>
+    </div>
+    <div class="row" style="margin:50px;">
+        <div class="col-md-2 text-md-right">
+            Mô tả:
+        </div>
+        <div class="col-md-10">
+            @Html.Raw(Model.MoTa)
+        </div>
+    </div>
+    <div class="row" style="margin:50px;">
+        <div class="col-md-2 text-md-right">
+            Mô tả:
+        </div>
+        <div class="col-md-10">
+            @Html.Raw(Model.NoiDung)
+        </div>
+    </div>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-md-12">
+                <input type="submit" value="Xóa" class="btn btn-default btn-danger" />
+                @Html.ActionLink("Quay lại", "SanPham", null, new { @class = "btn btn-info" })
+            </div>
+        </div>
+    }
+
+</div>

@@ -1,0 +1,256 @@
+﻿<style type="text/css">
+img {
+	 max-width: 100%;
+	 height: auto;
+	 object-fit: cover;
+}
+ nav {
+	 display: block;
+}
+ nav li {
+	 font-size: 1.125rem;
+	 margin: 0;
+}
+ .flex-nav ul {
+	 position: absolute;
+	 z-index: 1;
+	 list-style: none;
+	 margin: 0;
+	 padding: 0;
+	 display: flex;
+	 flex-wrap: wrap;
+	 flex-direction: column;
+	 display: none;
+	 width: 100%;
+	 left: 0;
+	 padding: 1rem;
+	 background: white;
+	 text-align: center;
+}
+ .flex-nav ul.active {
+	 display: flex;
+}
+ .flex-nav ul li {
+	 margin: 0.5rem 0;
+}
+ .toggle-nav {
+	 display: flex;
+	 justify-content: flex-end;
+	 font-size: 1.125rem;
+	 line-height: 1.7;
+	 margin: 1rem 0;
+}
+ .toggle-nav i {
+	 font-size: 1.5rem;
+	 line-height: 1.4;
+	 margin: 0 0 0 0.5rem;
+}
+ #highlight {
+	 color: black;
+	 font-size: 1.125rem;
+	 text-transform: uppercase;
+}
+ .price {
+	 margin: 0;
+}
+ .breadcrumb-list {
+	 display: flex;
+	 flex-wrap: wrap;
+	 padding: 0;
+	 margin: 1rem 0 0 0;
+	 list-style: none;
+}
+ .breadcrumb-list li {
+	 font-size: 0.85rem;
+	 letter-spacing: 0.125rem;
+	 text-transform: uppercase;
+}
+ .breadcrumb-item.active {
+	 color: black;
+}
+ .breadcrumb-item + .breadcrumb-item::before {
+	 content: '/';
+	 display: inline-block;
+	 padding: 0 0.5rem;
+	 color: lightergray;
+}
+ .description {
+	 border-top: 0.0625rem solid gray;
+	 margin: 2rem 0;
+	 padding: 1rem 0 0 0;
+}
+ .add-to-cart {
+	 position: relative;
+	 display: inline-block;
+	 background: button;
+	 color: white;
+	 border: none;
+	 border-radius: 0;
+	 padding: 1.25rem 2.5rem;
+	 font-size: 1rem;
+	 text-transform: uppercase;
+	 cursor: pointer;
+	 transform: translateZ(0);
+	 transition: color 0.3s ease;
+	 letter-spacing: 0.0625rem;
+}
+ .add-to-cart:hover::before {
+	 transform: scaleX(1);
+}
+ .add-to-cart::before {
+	 position: absolute;
+	 content: '';
+	 z-index: -1;
+	 top: 0;
+	 left: 0;
+	 right: 0;
+	 bottom: 0;
+	 background: button-hover;
+	 transform: scaleX(0);
+	 transform-origin: 0 50%;
+	 transition: transform 0.3s ease-out;
+}
+ .container {
+	 margin: auto;
+	 padding: 0 1rem;
+	 max-width: 75rem;
+	 width: 100%;
+}
+    table, tr, td {
+        border: 1px solid;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    tr #2 {
+        border: 1px solid;
+        background-color: #cecdcd;
+    }
+
+    th {
+        background-color: #cecdcd;
+        height: 40px;
+        padding-left: 15px;
+        text-align: left;
+    }
+
+ @*@media (min-width: md) {
+	 .product-image img, .image-list img {
+		 width: 100%;
+	}
+	 .product-image {
+		 display: block;
+	}
+	 .product-image img {
+		 height: 52vh;
+	}
+	 .product-image img.active {
+		 display: block;
+		 margin: 0 0 0.75rem 0;
+	}
+	 .image-list {
+		 display: flex;
+		 overflow: hidden;
+	}
+	 .image-list li {
+		 margin: 0 0.75rem 0 0;
+		 flex-basis: 100%;
+	}
+	 .image-list li:nth-child(3) {
+		 margin: 0;
+	}
+	 .image-list img {
+		 height: 10rem;
+		 width: 100%;
+		 transition: opacity 0.3s ease;
+		 cursor: pointer;
+	}
+	 .image-list img:hover {
+		 opacity: 0.7;
+	}
+	 nav ul {
+		 justify-content: flex-end;
+	}
+	 .toggle-nav {
+		 display: none;
+	}
+	 .flex-nav {
+		 display: block;
+	}
+	 .flex-nav ul {
+		 display: flex;
+		 flex-direction: row;
+		 position: relative;
+		 justify-content: flex-end;
+	}
+	 .flex-nav ul li {
+		 font-size: 1.125rem;
+		 margin: 0 1.5rem 0 0;
+	}
+	 .flex-nav ul li:nth-child(4) {
+		 margin: 0;
+	}
+}*@
+
+</style>
+@{
+    ViewBag.Title = "ChiTietSanPham";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container body-content" style="margin-top: 50px; margin-bottom:50px;">
+    <div class="row">
+
+        <div class="grid product">
+            <div class="col-xs-12 col-md-7">
+                <div class="product-image">
+                    <img src="~/HinhSanPham/@Model.Anh">
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-5">
+                <h1>@Model.TenSP</h1>
+                <h2>Giá bán: @Model.GiaBan VNĐ</h2>
+                <div class="description">
+                    <div id="log">
+                        @Html.Raw(Model.MoTa)
+                    </div>
+
+                </div>
+                <a class="btn btn-default btn-success" href="@Url.Action("ThemGioHang", "GioHang", new { id = @Model.ID_SANPHAM , strURL= Request.Url.ToString() })">Thêm giỏ hàng</a>
+
+            </div>
+        </div>
+        <div class="container text-center">
+            @Html.Raw(Model.NoiDung)
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+var $log = $( "#log" ),
+  str = m,
+  html = $.parseHTML( str ),
+  nodeNames = [];
+
+// Append the parsed HTML
+$log.append( html );
+
+// Gather the parsed HTML's node names
+$.each( html, function( i, el ) {
+  nodeNames[ i ] = "<li>" + el.nodeName + "</li>";
+});
+
+// Insert the node names
+$log.append( "<h3>Node Names:</h3>" );
+$( "<ol></ol>" )
+  .append( nodeNames.join( "" ) )
+  .appendTo( $log );
+    </script>
+}
+
+

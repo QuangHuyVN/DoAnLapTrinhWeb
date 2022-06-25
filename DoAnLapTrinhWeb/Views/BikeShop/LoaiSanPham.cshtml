@@ -1,0 +1,8 @@
+﻿
+<div class="list-group">
+    @foreach (var lsp in Model)
+    {
+        <a href="@Url.Action("SanPhamTheoLoai", "BikeShop", new { id = lsp.ID_LSP })" class="list-group-item"> @lsp.TenLoai</a>
+    }
+</div>
+

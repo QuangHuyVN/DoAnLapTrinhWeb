@@ -1,0 +1,90 @@
+﻿@using DoAnLapTrinhWeb.Models;
+@using PagedList.Mvc;
+@model PagedList.PagedList<SANPHAM>
+@{
+    ViewBag.Title = "SanPham";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@helper Trucate(string input, int length)
+{
+    if (input.Length < length)
+    {
+        @input
+    }
+    else
+    {
+        @input.Substring(0, length) <Text> ..... </Text>
+    }
+}
+
+<h2 style="text-align:center;">QUẢN LÝ DANH MỤC SẢN PHẨM</h2>
+
+<p>
+    @Html.ActionLink("Thêm Sản Phẩm", "ThemMoiSanPham", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th width="150">
+            Hình ảnh
+        </th>
+        <th width="250">
+            Tên sản phẩm
+        </th>
+        <th width="250">
+            Loại sản phẩm
+        </th>
+        <th width="200">
+            Nhãn hiệu
+        </th>
+        <th width="200">
+            Giá bán
+        </th>
+        <th width="300">
+            Số lượng tồn
+        </th>
+        <th width="600"></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img width="150" src="~/HinhSanPham/@item.Anh" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenSP)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LOAISANPHAM.TenLoai)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BRAND.Brand1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuongTon)
+            </td>
+            <td>
+                @Html.ActionLink("Chỉnh sửa", "SuaSanPham", new { id = item.ID_SANPHAM }, new { @class = "btn btn-warning" })
+                @Html.ActionLink("Chi tiết", "ChiTietSanPham", new { id = item.ID_SANPHAM }, new { @class = "btn btn-info" })
+                @Html.ActionLink("Xóa", "XoaSanPham", new { id = item.ID_SANPHAM }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+    @*//rte*@
+</table>
+<div>
+    Trang @(Model.PageNumber>Model.PageCount?3:Model.PageNumber) /@Model.PageCount
+</div>
+<div class="Menutrang">
+    @Html.PagedListPager(Model, page => Url.Action("SanPham", new { page = page }))
+</div>
+
+<style>
+    .Menutran li {
+        display: inline
+    }
+</style>
