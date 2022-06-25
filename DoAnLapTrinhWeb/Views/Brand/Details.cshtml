@@ -1,0 +1,27 @@
+﻿@model DoAnLapTrinhWeb.Models.BRAND
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>THÔNG TIN BRAND</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            TÊN BRAND:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Brand1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_BRAND }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>

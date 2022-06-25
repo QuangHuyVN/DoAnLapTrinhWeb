@@ -273,12 +273,16 @@
     <Content Include="Views\BikeShop\SanPhamTheoBrand.cshtml" />
     <Content Include="Views\BikeShop\ChiTietSanPham.cshtml" />
     <Content Include="Views\BikeShop\DonDatHang.cshtml" />
+    <Content Include="Views\Brand\Index.cshtml" />
+    <Content Include="Views\Brand\Details.cshtml" />
+    <Content Include="Views\Brand\Create.cshtml" />
+    <Content Include="Views\Brand\Delete.cshtml" />
+    <Content Include="Views\Brand\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\images\" />
     <Folder Include="HinhSanPham\" />
-    <Folder Include="Views\Brand\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

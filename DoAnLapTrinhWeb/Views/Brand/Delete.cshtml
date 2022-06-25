@@ -1,0 +1,59 @@
+﻿@model DoAnLapTrinhWeb.Models.BRAND
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<div>
+    <h3 style="text-align:center">Bạn có muốn xóa nhãn hàng này không?</h3>
+    <br />
+
+    <div class="row">
+        <div class="col-md-3">
+            <br />
+        </div>
+        <div class="col-md-6">
+            <dl>
+                <dt class="col-md-6 text-md-right">
+                    Tên Nhãn Hàng
+                </dt>
+
+                <dt class="col-md-6 text-md-left">
+                    @Html.DisplayFor(model => model.Brand1)
+                </dt>
+
+            </dl>
+        </div>
+        <div class="col-md-3">
+            <br />
+        </div>
+    </div>
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <div class="col-md-3">
+                <br />
+            </div>
+            <div class="col-md-6 text-md-center">
+                <dl>
+                    <dt class="col-md-6 text-md-right">
+                        <input type="submit" value="Delete" class="btn btn-warning" />
+                    </dt>
+
+                    <dt class="col-md-6 text-md-left">
+                        @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-default" })
+                    </dt>
+
+                </dl>
+            </div>
+            <div class="col-md-3">
+                <br />
+            </div>
+        </div>
+    }
+</div>

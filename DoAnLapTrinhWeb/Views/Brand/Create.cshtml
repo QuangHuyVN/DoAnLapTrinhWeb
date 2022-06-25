@@ -1,0 +1,34 @@
+﻿@model DoAnLapTrinhWeb.Models.BRAND
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4 style="text-align:center;">THÊM NHÃN HÀNG</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            <p class="col-md-2 control-label">Tên Nhãn Hàng</p>
+            <div class="col-md-9">
+                @Html.EditorFor(model => model.Brand1, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Brand1, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="text-center">
+                <input type="submit" value="Thêm Mới" class="btn btn-default btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-default" })
+</div>
