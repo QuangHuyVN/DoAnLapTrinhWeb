@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "XacNhanDonHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container body-content" style="margin-top: 50px;">
+    <div class="row center-block text-center">
+        <i class="fa fa-check " style="font-size: 150px; background-color: chartreuse; padding: 30px; color: white; border-radius: 50%;"></i>
+    </div>
+    <div class="row text-center">
+        <h3>Đơn hàng của quý khách chúng tôi đã tiếp nhận. Chúng tôi sẽ liện hệ sớm để giao hàng hàng cho quý khách</h3>
+        <a href="@Url.Action("Payment","ThanhToan")">Thanh toán</a>
+        <a href="@Url.Action("Index","Home")" class="btn btn-default btn-toolbar"> Về trang chủ </a>
+    </div>
+</div>

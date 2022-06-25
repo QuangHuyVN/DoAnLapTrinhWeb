@@ -1,0 +1,104 @@
+﻿@model IEnumerable<DoAnLapTrinhWeb.Models.DONDATHANG>
+
+@{
+    ViewBag.Title = "DonDatHang";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-center">ĐƠN ĐẶT HÀNG</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Mã đơn hàng
+        </th>
+        <th>
+            Họ tên khách hàng
+        </th>
+        <th>
+            Số điện thoại
+        </th>
+        <th>
+            Địa chỉ
+        </th>
+        <th>
+            Đã thanh toán
+        </th>
+        <th>
+            Tình trạng
+        </th>
+        <th>
+            Tình trạng giao hàng
+        </th>
+        <th>
+            Ngày đặt
+        </th>
+        <th>
+            Ngày giao
+        </th>
+        <th></th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID_DDH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUser.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUser.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUser.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DaThanhToan)
+            </td>
+            <td>
+                @if (item.TinhTrang == null)
+                {
+                    <p>Chờ xác nhận</p>
+                }
+                else if (item.TinhTrang == true)
+                {
+                    <p>Đã hoàn thành</p>
+                }
+                else
+                {
+                    <p>Đã nhận đơn</p>
+                }
+            </td>
+            <td>
+                @if (item.TinhTrangGiaoHang == null)
+                {
+                    <p></p>
+                }
+                else if (item.TinhTrangGiaoHang == true)
+                {
+                    <p>Đã hoàn thành</p>
+                }
+                else
+                {
+                    <p>Đang giao</p>
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayDat)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgayGiao)
+            </td>
+            <td>
+                @Html.ActionLink("Chi tiết", "ChiTietDonHang", new { id = item.ID_DDH }, new { @class = "btn btn-info" })
+            </td>
+            <td>
+                <a href="@Url.Action("XacNhan","GioHang", new {id = item.ID_DDH})" class="btn btn-primary">Nhận đơn</a>
+            </td>
+        </tr>
+    }
+
+</table>

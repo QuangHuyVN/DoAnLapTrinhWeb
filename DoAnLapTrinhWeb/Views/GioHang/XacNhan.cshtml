@@ -1,0 +1,96 @@
+﻿@model DoAnLapTrinhWeb.Models.DONDATHANG
+
+@{
+    ViewBag.Title = "XacNhan";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 class="text-center">XÁC NHẬN ĐƠN HÀNG</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID_DDH)
+        <div class="form-group">
+            @Html.Label("Mã đơn hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.ID_DDH)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("Mã khách hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.ID_KH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Đã thanh toán", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                <div class="checkbox" style="margin-left:20px">
+                    @Html.EditorFor(model => model.DaThanhToan)
+                    @Html.ValidationMessageFor(model => model.DaThanhToan, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Tình trạng đơn hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.TinhTrang, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TinhTrang, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Tình trạng giao hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.TinhTrangGiaoHang, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TinhTrangGiaoHang, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Ngày đặt hàng", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.NgayDat)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Ngày giao dự kiến", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.EditorFor(model => model.NgayGiao, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.NgayGiao, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Ưu đãi ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.DisplayFor(model => model.UuDai)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Số tiền phải thanh toán", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @String.Format("{0:0,0}", Model.TongTien)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-8">
+                <input type="submit" value="Save" class="btn btn-default btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Quay lại", "DonDatHang", null, new { @class = "btn btn-default" })
+</div>

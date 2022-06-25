@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 15.75" name="BikeShop">
+  <DataContextMoniker Name="/BikeShopDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0b84e85d-60ef-45d5-8141-046e306d3bce" absoluteBounds="6.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BikeShopDataContext/__MigrationHistory" />
+      <nestedChildShapes>
+        <elementListCompartment Id="848f71e7-2b3c-4a51-99a0-46fa95796d0c" absoluteBounds="6.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="a7f7d10a-898e-4330-8989-1d3eed0ee1a7" absoluteBounds="6.75, 3.75, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/BikeShopDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="fbfebbc6-3a9b-4cf8-9dd5-106ba6a9d79a" absoluteBounds="6.765, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52898c72-a962-44e0-b071-0a20458180d0" absoluteBounds="0.75, 1.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/BikeShopDataContext/AspNetRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c925872d-b6ef-46ef-a3c2-345d80a304c8" absoluteBounds="0.765, 1.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b14b030d-0a7a-4786-b4aa-9e4b678a07b2" absoluteBounds="3.5, 6.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BikeShopDataContext/AspNetUserClaim" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cb86399e-2d21-4f89-853e-bd1904a6f4f3" absoluteBounds="3.515, 6.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="cc4c4c4a-8a12-468a-8deb-d9f34e7a67fb" absoluteBounds="3.5, 4.25, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/BikeShopDataContext/AspNetUserLogin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16d0c03c-9a46-4e61-b1ce-b67b52890580" absoluteBounds="3.515, 4.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7b7d2b94-0f4b-42ab-a053-76d6a49a3010" absoluteBounds="0.75, 4, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/BikeShopDataContext/AspNetUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="58239fb6-2f9d-4a12-837a-b2cb9931bc0b" absoluteBounds="0.765, 4.46, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34d3075a-1801-4f8f-841e-660918c1828a" absoluteBounds="3.5, 2.125, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/BikeShopDataContext/AspNetUserRole" />
+      <nestedChildShapes>
+        <elementListCompartment Id="35ea09bd-a741-47d4-9305-6832177068f7" absoluteBounds="3.515, 2.585, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="caea86c9-2d07-4501-8ef9-4738ee74a5ed" absoluteBounds="0.75, 12.375, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/BikeShopDataContext/BRAND" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c1d573ef-41e3-4ff3-ad58-259086126fca" absoluteBounds="0.765, 12.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="caee7b31-8b57-484c-a4e1-cb165c3106d8" absoluteBounds="6.25, 9.125, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/BikeShopDataContext/ChiTietDonHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cabfa175-de4d-45c9-b60f-63daabcb1282" absoluteBounds="6.265, 9.585, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5519d39e-45a6-40c4-bc48-6f0c002ae467" absoluteBounds="3.5, 8.625, 2, 2.5401025390624987">
+      <DataClassMoniker Name="/BikeShopDataContext/DONDATHANG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="85f325f9-d682-4d73-9573-443f456c0a1f" absoluteBounds="3.515, 9.085, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8964b612-b2a0-4d20-9252-6b9a2e461650" absoluteBounds="3.5, 12.5, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/BikeShopDataContext/SANPHAM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d015f763-0796-41c5-b0a1-d48f7ea2a9a7" absoluteBounds="3.515, 12.96, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9cbcbd54-099b-4051-9f91-2ff0cc52c70b" absoluteBounds="0.75, 14.25, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/BikeShopDataContext/LOAISANPHAM" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b39247a8-6c0e-419b-aaf5-d63d63f955ce" absoluteBounds="0.765, 14.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="34cbe20e-ba42-410d-bcdb-42af10297fbb" absoluteBounds="6.75, 6.75, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/BikeShopDataContext/UUDAI" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4befaa6a-5fd8-497b-a79a-b21bc908374c" absoluteBounds="6.765, 7.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6.93830485026042); (3.5 : 6.93830485026042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BikeShopDataContext/AspNetUser/AspNetUser_AspNetUserClaim" />
+      <nodes>
+        <classShapeMoniker Id="7b7d2b94-0f4b-42ab-a053-76d6a49a3010" />
+        <classShapeMoniker Id="b14b030d-0a7a-4786-b4aa-9e4b678a07b2" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.94314697265625); (3.5 : 4.94314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BikeShopDataContext/AspNetUser/AspNetUser_AspNetUserLogin" />
+      <nodes>
+        <classShapeMoniker Id="7b7d2b94-0f4b-42ab-a053-76d6a49a3010" />
+        <classShapeMoniker Id="cc4c4c4a-8a12-468a-8deb-d9f34e7a67fb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 2.31899251302083); (1.75 : 2.54840811423277); (3.5 : 2.54840811423277)]" fixedFrom="Algorithm" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BikeShopDataContext/AspNetRole/AspNetRole_AspNetUserRole" />
+      <nodes>
+        <classShapeMoniker Id="52898c72-a962-44e0-b071-0a20458180d0" />
+        <classShapeMoniker Id="34d3075a-1801-4f8f-841e-660918c1828a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 4.00153746153846); (3.125 : 3.62653746153846); (3.125 : 2.72199625651042); (3.5 : 2.72199625651042)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BikeShopDataContext/AspNetUser/AspNetUser_AspNetUserRole" />
+      <nodes>
+        <classShapeMoniker Id="7b7d2b94-0f4b-42ab-a053-76d6a49a3010" />
+        <classShapeMoniker Id="34d3075a-1801-4f8f-841e-660918c1828a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 9.91429768880208); (6.25 : 9.91429768880208)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BikeShopDataContext/DONDATHANG/DONDATHANG_ChiTietDonHang" />
+      <nodes>
+        <classShapeMoniker Id="5519d39e-45a6-40c4-bc48-6f0c002ae467" />
+        <classShapeMoniker Id="caee7b31-8b57-484c-a4e1-cb165c3106d8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.75 : 7.50160970052083); (1.75 : 9.89505126953125); (3.5 : 9.89505126953125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BikeShopDataContext/AspNetUser/AspNetUser_DONDATHANG" />
+      <nodes>
+        <classShapeMoniker Id="7b7d2b94-0f4b-42ab-a053-76d6a49a3010" />
+        <classShapeMoniker Id="5519d39e-45a6-40c4-bc48-6f0c002ae467" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 13.8662019856771); (7.25 : 13.8662019856771); (7.25 : 10.7035953776042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BikeShopDataContext/SANPHAM/SANPHAM_ChiTietDonHang" />
+      <nodes>
+        <classShapeMoniker Id="8964b612-b2a0-4d20-9252-6b9a2e461650" />
+        <classShapeMoniker Id="caee7b31-8b57-484c-a4e1-cb165c3106d8" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 13.0344962565104); (3.5 : 13.0344962565104)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BikeShopDataContext/BRAND/BRAND_SANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="caea86c9-2d07-4501-8ef9-4738ee74a5ed" />
+        <classShapeMoniker Id="8964b612-b2a0-4d20-9252-6b9a2e461650" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 14.7412019856771); (3.5 : 14.7412019856771)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BikeShopDataContext/LOAISANPHAM/LOAISANPHAM_SANPHAM" />
+      <nodes>
+        <classShapeMoniker Id="9cbcbd54-099b-4051-9f91-2ff0cc52c70b" />
+        <classShapeMoniker Id="8964b612-b2a0-4d20-9252-6b9a2e461650" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

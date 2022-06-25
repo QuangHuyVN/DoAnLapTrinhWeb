@@ -1,0 +1,58 @@
+﻿@using DoAnLapTrinhWeb.Models
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container body-content">
+
+    <div class="shopping-cart-gh" style="margin-top:50px;">
+        <div class="product-gh" style="height:50px;">
+            <label class="product-gh-image">Hình ảnh</label>
+            <label class="product-gh-details">Tên</label>
+            <label class="product-gh-price">Giá</label>
+            <label class="product-gh-quantity">Số lượng</label>
+            <label class="product-gh-removal">Xóa</label>
+            <label class="product-gh-removal">Cập nhật</label>
+            <label class="product-gh-line-price">Tổng</label>
+        </div>
+        @foreach (var item in Model)
+        {
+            <div class="product-gh">
+                <div class="product-gh-image">
+                    <img src="~/HinhSanPham/@item.sAnh">
+                </div>
+                <div class="product-gh-details">
+                    <div class="product-gh-title">@item.sTensp</div>
+                </div>
+                @using (Html.BeginForm("CapNhatGioHang", "GioHang", new { id = item.iIdsanpham }))
+                {
+                    <div class="product-gh-price">@String.Format("{0:0,0}", item.dDongia)</div>
+                    <div class="product-gh-quantity">
+                        <input type="number" value="@item.iSoluong" min="1" name="txtSoluong">
+                    </div>
+                    <div class="product-gh-removal">
+                        <a href="@Url.Action("XoaGioHang", "GioHang", new { id = item.iIdsanpham })" class="btn remove-product"> Xóa  </a>
+                    </div>
+                    <div class="product-gh-removal">
+                        <input type="submit" value="Cập nhật" class="btn btn-success remove-product" style="background-color: limegreen" />
+                    </div>
+                }
+                <div class="product-gh-line-price">@String.Format("{0:0,0}", item.dThanhtien) </div>
+            </div>
+        }
+
+
+
+        <div class="totals">
+            <a href="@Url.Action("XoaTatCaGioHang","GioHang")" class="btn btn-danger"> Xóa tất cả giỏ hàng </a>
+            <div class="totals-item">
+                <label>Tổng tiền</label>
+                <div class="totals-value" id="cart-subtotal">@String.Format("{0:0,0}", ViewBag.TongTien) VNĐ </div>
+            </div>
+        </div>
+        <a class="btn btn-success bottom-right" style="float: right;" href="@Url.Action("DatHang", "GioHang")">Đặt Hàng</a>
+
+    </div>
+</div>
+

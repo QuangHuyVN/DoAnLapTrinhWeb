@@ -1,0 +1,43 @@
+﻿@model IEnumerable<DoAnLapTrinhWeb.Models.LOAISANPHAM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<h2 style="text-align:center;">QUẢN LÝ DANH SÁCH LOẠI SẢN PHẨM</h2>
+
+<div class="container center-block">
+    <div class="col-md-2"><br /></div>
+    <div class="col-md-8">
+        <p>
+            @Html.ActionLink("THÊM MỚI", "Create", null, new { @class = "btn  btn-success" })
+        </p>
+        <table class="table">
+            <tr>
+                <th width="60%">
+                    Tên Nhãn Hàng
+                </th>
+                <th>
+                    Chức Năng
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TenLoai)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Chỉnh sửa", "Edit", new { id = item.ID_LSP }, new { @class = "btn btn-info" }) |
+                        @Html.ActionLink("Xóa bỏ", "Delete", new { id = item.ID_LSP }, new { @class = "btn btn-danger" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+
+</div>

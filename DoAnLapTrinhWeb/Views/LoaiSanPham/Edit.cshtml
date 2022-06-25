@@ -1,0 +1,61 @@
+﻿@model DoAnLapTrinhWeb.Models.LOAISANPHAM
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div>
+    <h3 style="text-align:center">Sửa thông tin loại sản phẩm</h3>
+    <br />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="row">
+            <div class="col-md-3">
+                <br />
+            </div>
+            <div class="col-md-6">
+                <dl>
+                    <dt class="col-md-6 text-md-right">
+                        Tên Loại:
+                    </dt>
+
+                    <dt class="col-md-6 text-md-left">
+                        @Html.EditorFor(model => model.TenLoai, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TenLoai, "", new { @class = "text-danger" })
+                    </dt>
+
+                </dl>
+            </div>
+            <div class="col-md-3">
+                <br />
+            </div>
+        </div>
+        <br />
+
+
+        <div class="form-actions no-color">
+            <div class="col-md-3">
+                <br />
+            </div>
+            <div class="col-md-6 text-md-center">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                @Html.HiddenFor(model => model.ID_LSP)
+                <dl>
+                    <dt class="col-md-6 text-md-right">
+                        <input type="submit" value="Lưu" class="btn btn-success" />
+                    </dt>
+
+                    <dt class="col-md-6 text-md-left">
+                        @Html.ActionLink("Quay lại", "Index", null, new { @class = "btn btn-default" })
+                    </dt>
+
+                </dl>
+            </div>
+            <div class="col-md-3">
+                <br />
+            </div>
+        </div>
+    }
+</div>

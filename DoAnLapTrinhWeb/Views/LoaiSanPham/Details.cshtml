@@ -1,0 +1,27 @@
+﻿@model DoAnLapTrinhWeb.Models.LOAISANPHAM
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>THÔNG TIN LOẠI SẢN PHẨM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            TÊN LOẠI SẢN PHẨM:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenLoai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID_LSP }) |
+    @Html.ActionLink("Quay lại", "Index")
+</p>
